@@ -1,0 +1,30 @@
+---
+title: "ETL"
+author: "Karl Nagy"
+date: '2022-03-25'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,error = FALSE, echo = FALSE) 
+```
+
+# Key Question:
+* How have Ukraine's musical tastes changed since the invasion?
+* How have Russia's musical tastes changed?
+* How have Europe's musical tastes changed?
+
+# Data
+* Region/country
+* spotify info
+* date
+* time?
+* row_id
+
+# Cleaning
+
+## Packages
+```{r}
+install.packages("tidyverse", repos='http://cran.us.r-project.org')
+```
+
