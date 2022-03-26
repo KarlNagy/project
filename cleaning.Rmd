@@ -15,16 +15,33 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,error = FALSE, echo = FAL
 * How have Europe's musical tastes changed?
 
 # Data
+Take the top 50 in a country each day and plot it over time from 1 month before the invasion to present day (maybe repeat this for invasion of Crimea?). This should make ~3000 rows per country.
+
 * Region/country
-* spotify info
-* date
-* time?
+* danceability
+* energy
+* track_id
+* loudness
+* speechiness
+* tempo
+* uri
+* valence
+* date - 
 * row_id
 
 # Cleaning
 
 ## Packages
-```{r}
+```{r, include=FALSE}
 install.packages("tidyverse", repos='http://cran.us.r-project.org')
+install.packages("here", repos='http://cran.us.r-project.org')
+install.packages("spotifyr", repos='http://cran.us.r-project.org')
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(here)
+library(spotifyr)
 ```
 
