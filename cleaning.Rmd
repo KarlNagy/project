@@ -18,6 +18,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,error = FALSE, echo = FAL
 Take the top 50 in a country each day and plot it over time from 1 month before the invasion to present day (maybe repeat this for invasion of Crimea?). This should make ~3000 rows per country.
 
 * Region/country
+* genre
 * danceability
 * energy
 * track_id
