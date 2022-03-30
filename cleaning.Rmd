@@ -37,12 +37,40 @@ Take the top 50 in a country each day and plot it over time from 1 month before 
 install.packages("tidyverse", repos='http://cran.us.r-project.org')
 install.packages("here", repos='http://cran.us.r-project.org')
 install.packages("spotifyr", repos='http://cran.us.r-project.org')
+install.packages("knitr", repos='http://cran.us.r-project.org')
+install.packages("lubridate", repos='http://cran.us.r-project.org')
+
 ```
 
 ```{r}
 library(tidyverse)
 library(lubridate)
+library(knitr)
 library(here)
 library(spotifyr)
+```
+
+```{r}
+Sys.setenv(SPOTIFY_CLIENT_ID = '72409a2540ff40549726df49c2d7f4ca')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '10edfe439e5a4ec5ac3e74b49a5aaf9f')
+
+access_token <- get_spotify_access_token()
+```
+
+```{r}
+# testing
+kendrick <- get_artist_audio_features('kendrick lamar')
+
+summary(kendrick)
+head(kendrick)
+
+kendrick %>%
+  count(album_release_year, sort = TRUE) %>%
+  
+  ggplot(mapping = aes(x = album_release_year, y = n))
+```
+
+```{r}
+# finding playlist info
 ```
 
