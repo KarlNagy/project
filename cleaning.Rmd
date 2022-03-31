@@ -51,8 +51,8 @@ library(spotifyr)
 ```
 
 ```{r}
-Sys.setenv(SPOTIFY_CLIENT_ID = '72409a2540ff40549726df49c2d7f4ca')
-Sys.setenv(SPOTIFY_CLIENT_SECRET = '10edfe439e5a4ec5ac3e74b49a5aaf9f')
+Sys.setenv(SPOTIFY_CLIENT_ID = '')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '')
 
 access_token <- get_spotify_access_token()
 ```
@@ -67,7 +67,8 @@ head(kendrick)
 kendrick %>%
   count(album_release_year, sort = TRUE) %>%
   
-  ggplot(mapping = aes(x = album_release_year, y = n))
+  ggplot(mapping = aes(x = album_release_year, y = n)) +
+  geom_bar()
 ```
 
 ```{r}
